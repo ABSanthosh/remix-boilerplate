@@ -2,6 +2,7 @@
 
 - [Remix Docs](https://remix.run/docs)
 
+
 ## Netlify Setup
 
 1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
@@ -33,20 +34,13 @@ netlify init
 The Netlify CLI starts your app in development mode, rebuilding assets on file changes.
 
 ```sh
-npm run dev
+npm run start # or yarn start
 ```
 
 Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
-## Deployment
+It is suggested to use VS Code for this project. Remix does not support css pre-processors out of the box so we are using [Sass](https://sass-lang.com/) to compile our SCSS files into CSS. 
 
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
+The compiled CSS files will reside in the same directory as the SCSS files. To avoid confusion, I made a workspace setting for vscode that hides the compiled CSS files within VS Code. So while importing the stylesheets, you'll have to import the file with the extension .css.
 
-```sh
-npm run build
-# preview deployment
-netlify deploy
-
-# production deployment
-netlify deploy --prod
-```
+If you are using some other IDE, please look for a way to hide the compiled CSS files so you won't have any confusion.
