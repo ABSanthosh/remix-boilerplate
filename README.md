@@ -34,7 +34,7 @@ netlify init
 The Netlify CLI starts your app in development mode, rebuilding assets on file changes.
 
 ```sh
-npm run start # or yarn start
+npm run dev # or yarn dev
 ```
 
 Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
